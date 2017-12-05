@@ -8,9 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/platform-common/platform-common.iml" filepath="$PROJECT_DIR$/platform-common/platform-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform-dao/platform-dao.iml" filepath="$PROJECT_DIR$/platform-dao/platform-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform-model/platform-model.iml" filepath="$PROJECT_DIR$/platform-model/platform-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform-service/platform-service.iml" filepath="$PROJECT_DIR$/platform-service/platform-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform-util/platform-util.iml" filepath="$PROJECT_DIR$/platform-util/platform-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform-web/platform-web.iml" filepath="$PROJECT_DIR$/platform-web/platform-web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/platfrom-service/platfrom-service.iml" filepath="$PROJECT_DIR$/platfrom-service/platfrom-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/platfrom-util/platfrom-util.iml" filepath="$PROJECT_DIR$/platfrom-util/platfrom-util.iml" />
     </modules>
   </component>
 </project>

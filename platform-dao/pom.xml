@@ -12,7 +12,7 @@
     <dependencies>
         <dependency>
             <groupId>com.tjzy</groupId>
-            <artifactId>platfrom-util</artifactId>
+            <artifactId>platform-util</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

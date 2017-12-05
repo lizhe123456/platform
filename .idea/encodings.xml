@@ -7,8 +7,10 @@
     <file url="file://$PROJECT_DIR$/platform-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/platform-dao" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/platform-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platform-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platform-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platform-util" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/platform-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/platfrom-service" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/platfrom-util" charset="UTF-8" />
   </component>
 </project>

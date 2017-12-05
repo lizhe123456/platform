@@ -11,9 +11,9 @@
         <module name="platform-common" />
         <module name="platform-dao" />
         <module name="platform-model" />
+        <module name="platform-service" />
+        <module name="platform-util" />
         <module name="platform-web" />
-        <module name="platfrom-service" />
-        <module name="platfrom-util" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,7 +22,9 @@
       <module name="platform-api" target="1.8" />
       <module name="platform-common" target="1.8" />
       <module name="platform-dao" target="1.8" />
-      <module name="platform-model" target="1.5" />
+      <module name="platform-model" target="1.8" />
+      <module name="platform-service" target="1.8" />
+      <module name="platform-util" target="1.8" />
       <module name="platform-web" target="1.8" />
       <module name="platfrom-service" target="1.8" />
       <module name="platfrom-util" target="1.8" />

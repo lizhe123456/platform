@@ -29,10 +29,12 @@
       <module>platform-common</module>
       <module>platform-dao</module>
       <module>platform-web</module>
-      <module>platfrom-service</module>
-      <module>platfrom-util</module>
+      <module>platform-service</module>
+      <module>platform-util</module>
       <module>platform-admin</module>
       <module>platform-model</module>
+      <module>platform-util</module>
+      <module>platform-service</module>
   </modules>
 
   <dependencies>

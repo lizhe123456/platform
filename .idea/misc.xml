@@ -9,5 +9,11 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/platform-util/pom.xml" />
+        <option value="$PROJECT_DIR$/platfrom-service/pom.xml" />
+      </set>
+    </option>
   </component>
 </project>

@@ -1,4 +1,4 @@
-package com.tjzy.platform.common.datasource;
+package com.tjzy.platform.model.datasource;
 
 /**
  * 动态数据源持有者

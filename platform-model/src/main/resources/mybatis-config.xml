@@ -72,7 +72,7 @@
 
         </plugin>
 
-        <plugin interceptor="com.tjzy.platform.common.datasource.DynamicPlugin">
+        <plugin interceptor="com.tjzy.platform.model.datasource.DynamicPlugin">
         </plugin>
     </plugins>
 

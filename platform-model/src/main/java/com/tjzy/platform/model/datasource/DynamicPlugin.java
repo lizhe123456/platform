@@ -1,4 +1,4 @@
-package com.tjzy.platform.common.datasource;
+package com.tjzy.platform.model.datasource;
 
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.executor.keygen.SelectKeyGenerator;

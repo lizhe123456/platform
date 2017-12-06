@@ -11,6 +11,11 @@
 
     <artifactId>platform-model</artifactId>
     <dependencies>
+        <dependency>
+            <groupId>com.tjzy</groupId>
+            <artifactId>platform-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!-- Mybatis 依赖 及 插件 -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>

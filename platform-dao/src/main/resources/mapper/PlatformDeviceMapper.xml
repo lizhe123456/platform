@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tjzy.platform.dao.mapper.PlatformDeviceMapper" >
+  <resultMap id="BaseResultMap" type="com.tjzy.platform.model.bean.PlatformDevice" >
+    <id column="did" property="did" jdbcType="VARCHAR" />
+    <id column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="hostname" property="hostname" jdbcType="VARCHAR" />
+    <result column="ip" property="ip" jdbcType="VARCHAR" />
+    <result column="login_password" property="loginPassword" jdbcType="VARCHAR" />
+    <result column="local_ip" property="localIp" jdbcType="VARCHAR" />
+    <result column="sys" property="sys" jdbcType="VARCHAR" />
+    <result column="disksize" property="disksize" jdbcType="VARCHAR" />
+    <result column="enabled" property="enabled" jdbcType="CHAR" />
+    <result column="hdcapacity_cpu" property="hdcapacityCpu" jdbcType="VARCHAR" />
+    <result column="region" property="region" jdbcType="VARCHAR" />
+    <result column="start_time" property="startTime" jdbcType="TIMESTAMP" />
+    <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    did, user_id, hostname, ip, login_password, local_ip, sys, disksize, enabled, hdcapacity_cpu, 
+    region, start_time, end_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.tjzy.platform.model.bean.PlatformDeviceKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from platform_device
+    where did = #{did,jdbcType=VARCHAR}
+      and user_id = #{userId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.tjzy.platform.model.bean.PlatformDeviceKey" >
+    delete from platform_device
+    where did = #{did,jdbcType=VARCHAR}
+      and user_id = #{userId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.tjzy.platform.model.bean.PlatformDevice" >
+    insert into platform_device (did, user_id, hostname, 
+      ip, login_password, local_ip, 
+      sys, disksize, enabled, 
+      hdcapacity_cpu, region, start_time, 
+      end_time)
+    values (#{did,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{hostname,jdbcType=VARCHAR}, 
+      #{ip,jdbcType=VARCHAR}, #{loginPassword,jdbcType=VARCHAR}, #{localIp,jdbcType=VARCHAR}, 
+      #{sys,jdbcType=VARCHAR}, #{disksize,jdbcType=VARCHAR}, #{enabled,jdbcType=CHAR}, 
+      #{hdcapacityCpu,jdbcType=VARCHAR}, #{region,jdbcType=VARCHAR}, #{startTime,jdbcType=TIMESTAMP}, 
+      #{endTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tjzy.platform.model.bean.PlatformDevice" >
+    insert into platform_device
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="did != null" >
+        did,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="hostname != null" >
+        hostname,
+      </if>
+      <if test="ip != null" >
+        ip,
+      </if>
+      <if test="loginPassword != null" >
+        login_password,
+      </if>
+      <if test="localIp != null" >
+        local_ip,
+      </if>
+      <if test="sys != null" >
+        sys,
+      </if>
+      <if test="disksize != null" >
+        disksize,
+      </if>
+      <if test="enabled != null" >
+        enabled,
+      </if>
+      <if test="hdcapacityCpu != null" >
+        hdcapacity_cpu,
+      </if>
+      <if test="region != null" >
+        region,
+      </if>
+      <if test="startTime != null" >
+        start_time,
+      </if>
+      <if test="endTime != null" >
+        end_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="did != null" >
+        #{did,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="hostname != null" >
+        #{hostname,jdbcType=VARCHAR},
+      </if>
+      <if test="ip != null" >
+        #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="loginPassword != null" >
+        #{loginPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="localIp != null" >
+        #{localIp,jdbcType=VARCHAR},
+      </if>
+      <if test="sys != null" >
+        #{sys,jdbcType=VARCHAR},
+      </if>
+      <if test="disksize != null" >
+        #{disksize,jdbcType=VARCHAR},
+      </if>
+      <if test="enabled != null" >
+        #{enabled,jdbcType=CHAR},
+      </if>
+      <if test="hdcapacityCpu != null" >
+        #{hdcapacityCpu,jdbcType=VARCHAR},
+      </if>
+      <if test="region != null" >
+        #{region,jdbcType=VARCHAR},
+      </if>
+      <if test="startTime != null" >
+        #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null" >
+        #{endTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tjzy.platform.model.bean.PlatformDevice" >
+    update platform_device
+    <set >
+      <if test="hostname != null" >
+        hostname = #{hostname,jdbcType=VARCHAR},
+      </if>
+      <if test="ip != null" >
+        ip = #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="loginPassword != null" >
+        login_password = #{loginPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="localIp != null" >
+        local_ip = #{localIp,jdbcType=VARCHAR},
+      </if>
+      <if test="sys != null" >
+        sys = #{sys,jdbcType=VARCHAR},
+      </if>
+      <if test="disksize != null" >
+        disksize = #{disksize,jdbcType=VARCHAR},
+      </if>
+      <if test="enabled != null" >
+        enabled = #{enabled,jdbcType=CHAR},
+      </if>
+      <if test="hdcapacityCpu != null" >
+        hdcapacity_cpu = #{hdcapacityCpu,jdbcType=VARCHAR},
+      </if>
+      <if test="region != null" >
+        region = #{region,jdbcType=VARCHAR},
+      </if>
+      <if test="startTime != null" >
+        start_time = #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null" >
+        end_time = #{endTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where did = #{did,jdbcType=VARCHAR}
+      and user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tjzy.platform.model.bean.PlatformDevice" >
+    update platform_device
+    set hostname = #{hostname,jdbcType=VARCHAR},
+      ip = #{ip,jdbcType=VARCHAR},
+      login_password = #{loginPassword,jdbcType=VARCHAR},
+      local_ip = #{localIp,jdbcType=VARCHAR},
+      sys = #{sys,jdbcType=VARCHAR},
+      disksize = #{disksize,jdbcType=VARCHAR},
+      enabled = #{enabled,jdbcType=CHAR},
+      hdcapacity_cpu = #{hdcapacityCpu,jdbcType=VARCHAR},
+      region = #{region,jdbcType=VARCHAR},
+      start_time = #{startTime,jdbcType=TIMESTAMP},
+      end_time = #{endTime,jdbcType=TIMESTAMP}
+    where did = #{did,jdbcType=VARCHAR}
+      and user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+</mapper>

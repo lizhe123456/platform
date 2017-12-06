@@ -18,24 +18,27 @@ public class Result {
         return code;
     }
 
-    public void setCode(Integer code) {
-        this.code = code;
+    public Result setCode(ResultCode resultCode) {
+        this.code = resultCode.code;
+        return this;
     }
 
     public String getMsg() {
         return msg;
     }
 
-    public void setMsg(String msg) {
+    public Result setMsg(String msg) {
         this.msg = msg;
+        return this;
     }
 
     public Object getData() {
         return data;
     }
 
-    public void setData(Object data) {
+    public Result setData(Object data) {
         this.data = data;
+        return this;
     }
 
     @Override

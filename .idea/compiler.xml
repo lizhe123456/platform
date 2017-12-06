@@ -26,8 +26,6 @@
       <module name="platform-service" target="1.8" />
       <module name="platform-util" target="1.8" />
       <module name="platform-web" target="1.8" />
-      <module name="platfrom-service" target="1.8" />
-      <module name="platfrom-util" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

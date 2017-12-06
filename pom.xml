@@ -30,11 +30,9 @@
       <module>platform-dao</module>
       <module>platform-web</module>
       <module>platform-service</module>
-      <module>platform-util</module>
       <module>platform-admin</module>
       <module>platform-model</module>
       <module>platform-util</module>
-      <module>platform-service</module>
   </modules>
 
   <dependencies>
@@ -48,6 +46,10 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-test</artifactId>
           <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-aop</artifactId>
       </dependency>
       <!-- 常用库依赖 -->
       <dependency>

@@ -16,5 +16,10 @@
             <artifactId>platform-dao</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.tjzy</groupId>
+            <artifactId>platform-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 </project>

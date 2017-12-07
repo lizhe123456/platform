@@ -1,4 +1,4 @@
-package com.tjzy.platform.common;
+package com.tjzy.platform.model.base;
 
 import java.io.Serializable;
 

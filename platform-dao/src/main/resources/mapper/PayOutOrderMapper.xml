@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tjzy.platform.dao.mapper.PayOutOrderMapper" >
+  <resultMap id="BaseResultMap" type="com.tjzy.platform.model.pay.PayOutOrder" >
+    <id column="pay_out_order_id" property="payOutOrderId" jdbcType="INTEGER" />
+    <result column="uid" property="uid" jdbcType="INTEGER" />
+    <result column="pay_pay_id" property="payPayId" jdbcType="INTEGER" />
+    <result column="amount" property="amount" jdbcType="DECIMAL" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="ctime" property="ctime" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    pay_out_order_id, uid, pay_pay_id, amount, status, ctime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from pay_out_order
+    where pay_out_order_id = #{payOutOrderId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from pay_out_order
+    where pay_out_order_id = #{payOutOrderId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tjzy.platform.model.pay.PayOutOrder" >
+    insert into pay_out_order (pay_out_order_id, uid, pay_pay_id, 
+      amount, status, ctime
+      )
+    values (#{payOutOrderId,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{payPayId,jdbcType=INTEGER}, 
+      #{amount,jdbcType=DECIMAL}, #{status,jdbcType=TINYINT}, #{ctime,jdbcType=BIGINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.tjzy.platform.model.pay.PayOutOrder" >
+    insert into pay_out_order
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="payOutOrderId != null" >
+        pay_out_order_id,
+      </if>
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="payPayId != null" >
+        pay_pay_id,
+      </if>
+      <if test="amount != null" >
+        amount,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="ctime != null" >
+        ctime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="payOutOrderId != null" >
+        #{payOutOrderId,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null" >
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="payPayId != null" >
+        #{payPayId,jdbcType=INTEGER},
+      </if>
+      <if test="amount != null" >
+        #{amount,jdbcType=DECIMAL},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="ctime != null" >
+        #{ctime,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tjzy.platform.model.pay.PayOutOrder" >
+    update pay_out_order
+    <set >
+      <if test="uid != null" >
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="payPayId != null" >
+        pay_pay_id = #{payPayId,jdbcType=INTEGER},
+      </if>
+      <if test="amount != null" >
+        amount = #{amount,jdbcType=DECIMAL},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="ctime != null" >
+        ctime = #{ctime,jdbcType=BIGINT},
+      </if>
+    </set>
+    where pay_out_order_id = #{payOutOrderId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tjzy.platform.model.pay.PayOutOrder" >
+    update pay_out_order
+    set uid = #{uid,jdbcType=INTEGER},
+      pay_pay_id = #{payPayId,jdbcType=INTEGER},
+      amount = #{amount,jdbcType=DECIMAL},
+      status = #{status,jdbcType=TINYINT},
+      ctime = #{ctime,jdbcType=BIGINT}
+    where pay_out_order_id = #{payOutOrderId,jdbcType=INTEGER}
+  </update>
+</mapper>

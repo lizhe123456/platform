@@ -13,7 +13,7 @@
     <dependencies>
         <dependency>
             <groupId>com.tjzy</groupId>
-            <artifactId>platform-common</artifactId>
+            <artifactId>platform-util</artifactId>
             <version>${project.version}</version>
         </dependency>
         <!-- Mybatis 依赖 及 插件 -->

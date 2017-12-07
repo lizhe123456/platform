@@ -1,4 +1,4 @@
-package com.tjzy.platform.common.base;
+package com.tjzy.platform.model.base;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.tjzy.platform.util.RandomHelper;
@@ -10,7 +10,7 @@ import java.util.Date;
  * Created by lizhe on 2017/12/6 0006.
  * 目标定在月亮之上，即使失败，也可以落在众星之间。
  */
-public abstract class DataEntity extends BaseEntity{
+public abstract class DataEntity extends BaseEntity {
 
     /**
      * 删除标记0：正常

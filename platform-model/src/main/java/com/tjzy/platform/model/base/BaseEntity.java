@@ -1,4 +1,4 @@
-package com.tjzy.platform.common.base;
+package com.tjzy.platform.model.base;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.tjzy.platform.util.StringHelper;

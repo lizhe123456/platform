@@ -2,7 +2,8 @@ package com.tjzy.platform.common.base;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.tjzy.platform.common.Paging;
+import com.tjzy.platform.model.base.Paging;
+import com.tjzy.platform.model.base.DataEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 

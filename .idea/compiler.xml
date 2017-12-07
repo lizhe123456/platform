@@ -23,6 +23,7 @@
       <module name="platform-common" target="1.8" />
       <module name="platform-dao" target="1.8" />
       <module name="platform-model" target="1.8" />
+      <module name="platform-pay" target="1.8" />
       <module name="platform-service" target="1.8" />
       <module name="platform-util" target="1.8" />
       <module name="platform-web" target="1.8" />

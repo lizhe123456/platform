@@ -12,13 +12,7 @@
     <dependencies>
         <dependency>
             <groupId>com.tjzy</groupId>
-            <artifactId>platform-util</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.tjzy</groupId>
-            <artifactId>platform-model</artifactId>
+            <artifactId>platform-common</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

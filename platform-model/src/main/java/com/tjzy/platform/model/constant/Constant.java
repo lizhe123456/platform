@@ -16,6 +16,7 @@ public final class Constant {
     public static final String SERVICE_PACKAGE = BASE_PACKAGE + ".service";
     public static final String SERVICE_IMPL_PACKAGE = BASE_PACKAGE + ".service.impl";
     public static final String CONTROLLER_PACKAGE = BASE_PACKAGE + ".web.controller";
+    public static final String PAY_PACKAGE = BASE_PACKAGE + ".pay";
     public static final String MAPPER_INTERFACE_REFERENCE = BASE_PACKAGE + ".common.base.BaseMapper";
 
 

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tjzy.platform.dao.mapper.PayInOrderDetailMapper" >
+  <resultMap id="BaseResultMap" type="com.tjzy.platform.model.pay.PayInOrderDetail" >
+    <id column="pay_in_order_detail_id" property="payInOrderDetailId" jdbcType="INTEGER" />
+    <result column="pay_in_order_id" property="payInOrderId" jdbcType="INTEGER" />
+    <result column="product_id" property="productId" jdbcType="VARCHAR" />
+    <result column="product_name" property="productName" jdbcType="VARCHAR" />
+    <result column="product_price" property="productPrice" jdbcType="DECIMAL" />
+    <result column="product_count" property="productCount" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    pay_in_order_detail_id, pay_in_order_id, product_id, product_name, product_price, 
+    product_count, remark
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from pay_in_order_detail
+    where pay_in_order_detail_id = #{payInOrderDetailId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from pay_in_order_detail
+    where pay_in_order_detail_id = #{payInOrderDetailId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tjzy.platform.model.pay.PayInOrderDetail" >
+    insert into pay_in_order_detail (pay_in_order_detail_id, pay_in_order_id, 
+      product_id, product_name, product_price, 
+      product_count, remark)
+    values (#{payInOrderDetailId,jdbcType=INTEGER}, #{payInOrderId,jdbcType=INTEGER}, 
+      #{productId,jdbcType=VARCHAR}, #{productName,jdbcType=VARCHAR}, #{productPrice,jdbcType=DECIMAL}, 
+      #{productCount,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tjzy.platform.model.pay.PayInOrderDetail" >
+    insert into pay_in_order_detail
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="payInOrderDetailId != null" >
+        pay_in_order_detail_id,
+      </if>
+      <if test="payInOrderId != null" >
+        pay_in_order_id,
+      </if>
+      <if test="productId != null" >
+        product_id,
+      </if>
+      <if test="productName != null" >
+        product_name,
+      </if>
+      <if test="productPrice != null" >
+        product_price,
+      </if>
+      <if test="productCount != null" >
+        product_count,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="payInOrderDetailId != null" >
+        #{payInOrderDetailId,jdbcType=INTEGER},
+      </if>
+      <if test="payInOrderId != null" >
+        #{payInOrderId,jdbcType=INTEGER},
+      </if>
+      <if test="productId != null" >
+        #{productId,jdbcType=VARCHAR},
+      </if>
+      <if test="productName != null" >
+        #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="productPrice != null" >
+        #{productPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="productCount != null" >
+        #{productCount,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tjzy.platform.model.pay.PayInOrderDetail" >
+    update pay_in_order_detail
+    <set >
+      <if test="payInOrderId != null" >
+        pay_in_order_id = #{payInOrderId,jdbcType=INTEGER},
+      </if>
+      <if test="productId != null" >
+        product_id = #{productId,jdbcType=VARCHAR},
+      </if>
+      <if test="productName != null" >
+        product_name = #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="productPrice != null" >
+        product_price = #{productPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="productCount != null" >
+        product_count = #{productCount,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where pay_in_order_detail_id = #{payInOrderDetailId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tjzy.platform.model.pay.PayInOrderDetail" >
+    update pay_in_order_detail
+    set pay_in_order_id = #{payInOrderId,jdbcType=INTEGER},
+      product_id = #{productId,jdbcType=VARCHAR},
+      product_name = #{productName,jdbcType=VARCHAR},
+      product_price = #{productPrice,jdbcType=DECIMAL},
+      product_count = #{productCount,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR}
+    where pay_in_order_detail_id = #{payInOrderDetailId,jdbcType=INTEGER}
+  </update>
+</mapper>

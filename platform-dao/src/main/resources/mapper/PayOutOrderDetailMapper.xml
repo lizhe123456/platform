@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tjzy.platform.dao.mapper.PayOutOrderDetailMapper" >
+  <resultMap id="BaseResultMap" type="com.tjzy.platform.model.pay.PayOutOrderDetail" >
+    <id column="pay_out_order_detail_id" property="payOutOrderDetailId" jdbcType="INTEGER" />
+    <result column="pay_out_order_id" property="payOutOrderId" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    pay_out_order_detail_id, pay_out_order_id, remark
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from pay_out_order_detail
+    where pay_out_order_detail_id = #{payOutOrderDetailId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from pay_out_order_detail
+    where pay_out_order_detail_id = #{payOutOrderDetailId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tjzy.platform.model.pay.PayOutOrderDetail" >
+    insert into pay_out_order_detail (pay_out_order_detail_id, pay_out_order_id, 
+      remark)
+    values (#{payOutOrderDetailId,jdbcType=INTEGER}, #{payOutOrderId,jdbcType=INTEGER}, 
+      #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tjzy.platform.model.pay.PayOutOrderDetail" >
+    insert into pay_out_order_detail
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="payOutOrderDetailId != null" >
+        pay_out_order_detail_id,
+      </if>
+      <if test="payOutOrderId != null" >
+        pay_out_order_id,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="payOutOrderDetailId != null" >
+        #{payOutOrderDetailId,jdbcType=INTEGER},
+      </if>
+      <if test="payOutOrderId != null" >
+        #{payOutOrderId,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tjzy.platform.model.pay.PayOutOrderDetail" >
+    update pay_out_order_detail
+    <set >
+      <if test="payOutOrderId != null" >
+        pay_out_order_id = #{payOutOrderId,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where pay_out_order_detail_id = #{payOutOrderDetailId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tjzy.platform.model.pay.PayOutOrderDetail" >
+    update pay_out_order_detail
+    set pay_out_order_id = #{payOutOrderId,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR}
+    where pay_out_order_detail_id = #{payOutOrderDetailId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,4 +1,4 @@
-package com.tjzy.platform.web.controller;
+package com.tjzy.platform.common.base;
 
 import com.tjzy.platform.model.constant.Constant;
 import com.tjzy.platform.model.result.Result;

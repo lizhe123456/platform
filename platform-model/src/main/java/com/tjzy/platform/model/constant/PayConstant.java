@@ -8,6 +8,6 @@ public final class PayConstant {
 
     public static final String PAY_UID = "5c64226bafafcd4dd1416603";
     public static final String PAY_TOKEN = "da2d83ddd1643f612e740bf66ee11113";
-    public static final String PAY_URL = "https://pay.paysapi.com/";
+    public static final String PAY_URL = "https://pay.paysapi.com/?format=json";
 
 }

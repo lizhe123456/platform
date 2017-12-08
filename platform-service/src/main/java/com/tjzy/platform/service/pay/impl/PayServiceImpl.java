@@ -35,8 +35,7 @@ public class PayServiceImpl  implements PayService {
     public PayResponse pay(PayParams payParams) {
         HttpClient httpClient = HttpClient.getInstance();
         String payJson = httpClient.httpPost(PayConstant.PAY_URL,payParams);
-        PayResponse response = (PayResponse) JSON.parse(payJson);
-        return response;
+        return (PayResponse) JSON.parse(payJson);
     }
 
     //收入

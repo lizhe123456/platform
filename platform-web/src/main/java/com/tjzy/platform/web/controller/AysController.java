@@ -39,11 +39,10 @@ public class AysController extends BaseController{
     @ResponseBody
     public Object aliAys(HttpServletRequest request,@RequestParam(value = "istype") int istype) {
         PlatformOrder parameter = (PlatformOrder) JSON.parse(request.getParameter("order"));
-        PayResult result;
-        PayParams payParams = new PayParams(parameter.getSalary().floatValue(),istype,"/notify_url" ,"/return_url",UUID.randomUUID().toString(),parameter.getDeviceId());
+        PayParams payParams = new PayParams(0.01f,1,"http://localhost:8080"+request.getRequestURI()+"/notify_url" ,"http://localhost:8080"+request.getRequestURI()+"/return_url",UUID.randomUUID().toString());
         params = payParams.getParams(payParams);
-        PayResponse response = payService.pay(params);
-        return response;
+        PayResponse body = payService.pay(params);
+        return body;
     }
 
     @GetMapping("/notify_url")
@@ -57,7 +56,7 @@ public class AysController extends BaseController{
         }
     }
 
-    @RequestMapping("/returnPay")
+    @RequestMapping("/return_url")
     public ModelAndView returnPay(HttpServletRequest request, HttpServletResponse response, String orderid) {
         boolean isTrue = false;
         ModelAndView view = null;

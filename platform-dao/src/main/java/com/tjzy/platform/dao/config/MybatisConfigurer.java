@@ -29,7 +29,6 @@ import java.util.Properties;
 @EnableTransactionManagement
 public class MybatisConfigurer implements TransactionManagementConfigurer{
 
-    @Qualifier("dataSource")
     @Autowired
     DataSource dataSource;
 

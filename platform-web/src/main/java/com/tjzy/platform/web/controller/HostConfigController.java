@@ -4,7 +4,7 @@ package com.tjzy.platform.web.controller;
  * author:lizhe
  * date: 2017-12-08
  * for tomorrow
- * 类介绍:
+ * 类介绍: 主机操作接口
  */
 public class HostConfigController {
 

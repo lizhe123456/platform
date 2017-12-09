@@ -29,6 +29,11 @@ import java.util.UUID;
 @SessionScope
 public class AysController extends BaseController{
 
+    /**
+     * 相关表 pay_pay
+     * 生成收入支出记录
+     */
+
     @Autowired
     private PayService payService;
 

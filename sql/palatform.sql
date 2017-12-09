@@ -115,7 +115,8 @@ CREATE TABLE platform_order
   COMMENT '开始时间',
   end_time   DATETIME         NULL
   COMMENT '结束时间',
-  PRIMARY KEY (oid, user_id, device_id)
+  PRIMARY KEY (oid, user_id, device_id),
+  KEY(order_num)
 )
   COMMENT '订单';
 CREATE INDEX order_num
